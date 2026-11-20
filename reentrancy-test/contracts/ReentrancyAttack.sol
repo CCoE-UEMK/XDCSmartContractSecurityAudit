@@ -19,7 +19,7 @@ contract ReentrancyAttack {
 
     receive() external payable {
         // Only perform 1 reentrancy step for safety
-        if (attackEnabled && attackCount < 19) {
+        if (attackEnabled && attackCount < 23) {
             attackCount++;
             validator.withdraw(0.1 ether, 0);
         }
